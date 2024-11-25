@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Route_Groups_AspNet.props" />
+</Project>
