@@ -17,6 +17,7 @@ C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.AssemblyInf
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.csproj.CoreCompileInputs.cache
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.MvcApplicationPartsAssemblyInfo.cs
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.MvcApplicationPartsAssemblyInfo.cache
+C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.sourcelink.json
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\scopedcss\bundle\Route_Groups_AspNet.styles.css
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets.build.json
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets.development.json
@@ -27,6 +28,7 @@ C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets\msbuild.build.R
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Route_Groups_AspNet.props
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Route_Groups_AspNet.props
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets.pack.json
+C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Gr.8AF0C870.Up2Date
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\Route_Groups_AspNet.dll
 C:\usr\.NET\Route_Groups_AspNet\obj\Debug\net9.0\refint\Route_Groups_AspNet.dll

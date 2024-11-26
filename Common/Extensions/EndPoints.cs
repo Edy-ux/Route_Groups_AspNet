@@ -15,13 +15,13 @@ public static class EndPoints
 
         endpoints.MapGroup("/products")
             .WithTags("Products")
-            // .RequireAuthorization()
+             .RequireAuthorization()
             .MapEndPoint<CreateProductsEndPoint>()
             .MapEndPoint<GetProductsEndPoint>();
 
         endpoints.MapGroup("/categories")
             .WithTags("Categories")
-            .RequireAuthorization()
+            // .RequireAuthorization()
             .MapEndPoint<CreateCategoryEndPoint>()
             .MapEndPoint<GetCategoryEndpoint>();
     }
