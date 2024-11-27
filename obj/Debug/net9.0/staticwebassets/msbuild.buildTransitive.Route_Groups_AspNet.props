@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Route_Groups_AspNet.props" />
-</Project>
