@@ -6,8 +6,6 @@ namespace Route_Groups_AspNet.Context;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
-
-    //public DbSet<Category> Categories { get; set; }A
     public DbSet<Category> Categories { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

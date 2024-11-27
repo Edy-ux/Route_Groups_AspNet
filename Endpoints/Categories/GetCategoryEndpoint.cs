@@ -8,17 +8,15 @@ namespace Route_Groups_AspNet.Endpoints.Categories;
 public class GetCategoryEndpoint : IEndpoint
 {
     public static void MapRoute(IEndpointRouteBuilder app)
-    => app.MapGet("/GetAll", HanderAsync);
+        => app.MapGet("/GetAll", HanderAsync);
 
-    private static  IEnumerable<Category> HanderAsync([FromServices] ICategoryService service)
+    private static async Task<IEnumerable<Category>> HanderAsync(ICategoryService service)
     {
-        var categories = service.GetAsync();
+        var categories = await service.GetAsync();
 
         if (!categories.Any())
-              return Enumerable.Empty<Category>();
+            return Enumerable.Empty<Category>();
 
         return categories;
     }
-
-
 }
