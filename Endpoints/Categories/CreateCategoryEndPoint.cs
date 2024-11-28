@@ -1,4 +1,4 @@
-using Route_Groups_AspNet.Common;
+using Route_Groups_AspNet.Common.Extensions.Http;
 using Route_Groups_AspNet.Model;
 using Route_Groups_AspNet.Services.Interfaces;
 
@@ -6,16 +6,16 @@ namespace Route_Groups_AspNet.Endpoints.Categories;
 
 public class CreateCategoryEndPoint : IEndpoint
 {
-    public static void MapRoute(IEndpointRouteBuilder app)
+    public static void Map(IEndpointRouteBuilder app)
         => app.MapPost("/create", HanderAsync);
-
+    
     private static async Task<IResult> HanderAsync(ICategoryService service, Category req)
     {
         //ver se o category já esta cadastrada
     
         Category category = new(req.Title, req.Url);
         //fake load
-        await Task.Delay(2000);
+        await Task.Delay(1200);
 
         return Results.Ok(category);
     }

@@ -4,13 +4,14 @@ using Route_Groups_AspNet.Model;
 
 namespace Route_Groups_AspNet.Context.Configuration;
 
-public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+public class CategoryConfiguration : IEntityTypeConfiguration<Category> 
 {
     public void Configure(EntityTypeBuilder<Category> builder)
     {
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Title).HasMaxLength(100).IsRequired();
         builder.Property(x => x.Url).HasMaxLength(600).IsRequired();
+
         List<Category> categories =
         [
             new Category(title: "Tecnologias",

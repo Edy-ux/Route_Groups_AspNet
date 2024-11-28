@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Route_Groups_AspNet.Context;
 
-namespace Route_Groups_AspNet.Common.Extensions;
+namespace Route_Groups_AspNet.Common.Extensions.Infra;
 
-public static class DbContextDependecyInjection
+public static class DbContextDependencyInjection
 {
     public static IServiceCollection AddDbContextDependencyInjection(this IServiceCollection services,
         IConfiguration configuration)

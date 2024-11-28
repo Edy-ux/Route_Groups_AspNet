@@ -1,7 +1,7 @@
 using Route_Groups_AspNet.Endpoints.Categories;
 using Route_Groups_AspNet.Endpoints.Porducts;
 
-namespace Route_Groups_AspNet.Common.Extensions;
+namespace Route_Groups_AspNet.Common.Extensions.Http;
 
 public static class EndPoints
 {
@@ -15,7 +15,7 @@ public static class EndPoints
 
         endpoints.MapGroup("/products")
             .WithTags("Products")
-             .RequireAuthorization()
+            .RequireAuthorization()
             .MapEndPoint<CreateProductsEndPoint>()
             .MapEndPoint<GetProductsEndPoint>();
 
@@ -29,7 +29,7 @@ public static class EndPoints
     private static IEndpointRouteBuilder MapEndPoint<TEndPoint>(this IEndpointRouteBuilder app)
         where TEndPoint : IEndpoint
     {
-        TEndPoint.MapRoute(app);
+        TEndPoint.Map(app);
         return app;
     }
 }
