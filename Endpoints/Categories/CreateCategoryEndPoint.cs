@@ -8,15 +8,16 @@ public class CreateCategoryEndPoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
         => app.MapPost("/create", HanderAsync);
-    
+
+
     private static async Task<IResult> HanderAsync(ICategoryService service, Category req)
     {
         //ver se o category já esta cadastrada
-    
         Category category = new(req.Title, req.Url);
         //fake load
-        await Task.Delay(1200);
-
+        await Task.Delay(1000);
+        await service.InsertAsync(category);
         return Results.Ok(category);
     }
+    
 }

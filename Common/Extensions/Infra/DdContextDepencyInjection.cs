@@ -10,6 +10,10 @@ public static class DbContextDependencyInjection
     {
         return services.AddDbContext<AppDbContext>(options
             => options.UseSqlite(configuration.GetConnectionString("DefaultConnection"),
-                x => x.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+                x => x.MigrationsAssembly(AssemblyFullName())));
+    }
+    private static string? AssemblyFullName()
+    {
+        return typeof(AppDbContext).Assembly.FullName;
     }
 }

@@ -8,9 +8,13 @@ namespace Route_Groups_AspNet.Services;
 public class CategoryService(AppDbContext context) : ICategoryService
 {
     private readonly AppDbContext _context = context;
-    public Category InsertAsync(Category entity)
+    public async Task<Category> InsertAsync(Category entity)
     {
-        throw new NotImplementedException();
+        var gategory = new Category(title: entity.Title, url: entity.Url);
+
+        _context.Categories.Add(gategory);
+        await _context.SaveChangesAsync();
+        return gategory;
     }
 
     public async Task<IEnumerable<Category>> GetAsync()

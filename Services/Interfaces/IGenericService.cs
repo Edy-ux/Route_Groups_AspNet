@@ -5,7 +5,7 @@ namespace Route_Groups_AspNet.Services.Interfaces;
 
 public interface IGenericService<TEntity> where TEntity : class
 {
-    TEntity InsertAsync(TEntity entity);
+    Task<TEntity> InsertAsync(TEntity entity);
     Task<IEnumerable<TEntity>> GetAsync();
 
 }

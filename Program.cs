@@ -1,10 +1,11 @@
 using Microsoft.OpenApi.Models;
 using Route_Groups_AspNet.Common.Extensions.Http;
 using Route_Groups_AspNet.Common.Extensions;
+using Route_Groups_AspNet.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddInfraEstructureModule(builder.Configuration);
+builder.Services.AddInfraStructureModule(builder.Configuration);
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -20,3 +21,4 @@ app.MapEndPoints();
 
 
 app.Run();
+

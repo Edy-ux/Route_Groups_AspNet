@@ -7,23 +7,24 @@ public static class EndPoints
 {
     public static void MapEndPoints(this WebApplication app)
     {
-        var endpoints = app.MapGroup("");
-
-        endpoints.MapGroup("/")
-            .WithTags("Health Check")
-            .MapGet("/check", () => new { Message = "OK   " });
-
-        endpoints.MapGroup("/products")
-            .WithTags("Products")
-            .RequireAuthorization()
-            .MapEndPoint<CreateProductsEndPoint>()
-            .MapEndPoint<GetProductsEndPoint>();
-
+        var endpoints = app.MapGroup("api/v1/");
+        
         endpoints.MapGroup("/categories")
             .WithTags("Categories")
             // .RequireAuthorization()
             .MapEndPoint<CreateCategoryEndPoint>()
             .MapEndPoint<GetCategoryEndpoint>();
+        
+        endpoints.MapGroup("/")
+            .WithTags("Health Check")
+            .MapGet("/check",() => 
+                 new { Message = "Health Check OK"});
+        
+        endpoints.MapGroup("/products")
+            .WithTags("Products")
+            .RequireAuthorization()
+            .MapEndPoint<CreateProductsEndPoint>()
+            .MapEndPoint<GetProductsEndPoint>();
     }
 
     private static IEndpointRouteBuilder MapEndPoint<TEndPoint>(this IEndpointRouteBuilder app)
