@@ -1,4 +1,4 @@
-﻿using Route_Groups_AspNet.Model;
+﻿using Route_Groups_AspNet.Models;
 using System.Collections.Generic;
 
 namespace Route_Groups_AspNet.Services.Interfaces;

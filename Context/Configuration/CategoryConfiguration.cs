@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Route_Groups_AspNet.Model;
+using Route_Groups_AspNet.Models;
 
 namespace Route_Groups_AspNet.Context.Configuration;
 

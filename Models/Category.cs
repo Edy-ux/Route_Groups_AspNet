@@ -1,6 +1,5 @@
-using System.Reflection;
 
-namespace Route_Groups_AspNet.Model;
+namespace Route_Groups_AspNet.Models;
 
 public class Category(string title, string url)
 {

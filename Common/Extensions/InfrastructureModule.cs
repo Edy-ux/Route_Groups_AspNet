@@ -9,6 +9,6 @@ public static class InfrastructureModule
         IConfiguration configuration)
     {
         return services.AddDbContextDependencyInjection(configuration)
-                       .AddServicesDependencyInjection();
+                .AddServicesDependencyInjection();
     }
 }

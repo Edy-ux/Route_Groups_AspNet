@@ -1,5 +1,5 @@
 ﻿
-using Route_Groups_AspNet.Model;
+using Route_Groups_AspNet.Models;
 
 namespace Route_Groups_AspNet.Services.Interfaces;
 

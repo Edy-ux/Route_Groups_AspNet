@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Route_Groups_AspNet.Context;
-using Route_Groups_AspNet.Model;
+using Route_Groups_AspNet.Models;
 using Route_Groups_AspNet.Services.Interfaces;
 
 namespace Route_Groups_AspNet.Services;
