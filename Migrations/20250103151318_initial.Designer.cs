@@ -11,8 +11,8 @@ using Route_Groups_AspNet.Context;
 namespace Route_Groups_AspNet.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241127050316_updateCategoryConfig")]
-    partial class updateCategoryConfig
+    [Migration("20250103151318_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Route_Groups_AspNet.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
 
-            modelBuilder.Entity("Route_Groups_AspNet.Model.Category", b =>
+            modelBuilder.Entity("Route_Groups_AspNet.Models.Category", b =>
                 {
                     b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,19 +43,19 @@ namespace Route_Groups_AspNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d09fe398-0917-439d-8edc-d423894c21cc"),
+                            Id = new Guid("f993b84b-bee4-41c8-911e-8879702595a3"),
                             Title = "Tecnologias",
                             Url = "https://http2.mlstatic.com/D_NQ_NP2X_660966-MLA80300585057_102024-B.webp"
                         },
                         new
                         {
-                            Id = new Guid("f407aca2-ef55-4771-a1b4-1456bfaf2665"),
+                            Id = new Guid("b68c0981-903b-45ae-b44d-3438769c1fce"),
                             Title = "Casa E Móveis",
                             Url = "https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1729294158019-desktop26.png"
                         },
                         new
                         {
-                            Id = new Guid("f19d1d91-34dc-4a2d-ba08-1fee0468fcf3"),
+                            Id = new Guid("74a95654-9248-42d1-a9ba-756313bbec7e"),
                             Title = "Esportes e Fitnes",
                             Url = "https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1731421475975-desk-01-v2.jpg"
                         });

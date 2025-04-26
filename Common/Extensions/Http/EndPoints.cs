@@ -5,32 +5,38 @@ namespace Route_Groups_AspNet.Common.Extensions.Http;
 
 public static class EndPoints
 {
-    public static void MapEndPoints(this WebApplication app)
+    public static void MapEndPoints(this WebApplication endPoints)
     {
-        var endpoints = app.MapGroup("api/v1/");
-        
+        var endpoints = endPoints.MapGroup("api/v1/");
+
         endpoints.MapGroup("/categories")
             .WithTags("Categories")
             // .RequireAuthorization()
             .MapEndPoint<CreateCategoryEndPoint>()
-            .MapEndPoint<GetCategoryEndpoint>();
-        
+            .MapEndPoint<GetCategoryEndpoint>()
+            .MapEndPoint<DeleteProductEndPoint>();
+
         endpoints.MapGroup("/")
             .WithTags("Health Check")
-            .MapGet("/check",() => 
-                 new { Message = "Health Check OK"});
-        
+            .MapGet("/check", () =>
+                new { Message = "Application It´s Okay." });
+
+
+        endPoints.MapGroup("/users")
+            .WithTags("Users")
+            .MapGet("create", () => "Created");
+
         endpoints.MapGroup("/products")
             .WithTags("Products")
-            .RequireAuthorization()
+            //.RequireAuthorization()
             .MapEndPoint<CreateProductsEndPoint>()
             .MapEndPoint<GetProductsEndPoint>();
     }
 
-    private static IEndpointRouteBuilder MapEndPoint<TEndPoint>(this IEndpointRouteBuilder app)
+    private static IEndpointRouteBuilder MapEndPoint<TEndPoint>(this IEndpointRouteBuilder endPoint)
         where TEndPoint : IEndpoint
     {
-        TEndPoint.Map(app);
-        return app;
+        TEndPoint.Map(endPoint);
+        return endPoint;
     }
 }

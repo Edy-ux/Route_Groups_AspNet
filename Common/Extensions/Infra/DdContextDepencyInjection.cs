@@ -12,8 +12,6 @@ public static class DbContextDependencyInjection
             => options.UseSqlite(configuration.GetConnectionString("DefaultConnection"),
                 x => x.MigrationsAssembly(AssemblyFullName())));
     }
-    private static string? AssemblyFullName()
-    {
-        return typeof(AppDbContext).Assembly.FullName;
-    }
+    private static string? AssemblyFullName() => typeof(AppDbContext).Assembly.FullName;
+
 }

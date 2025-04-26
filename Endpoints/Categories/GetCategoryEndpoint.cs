@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Route_Groups_AspNet.Common.Extensions.Http;
-using Route_Groups_AspNet.Model;
+using Route_Groups_AspNet.Models;
 using Route_Groups_AspNet.Services.Interfaces;
 
 namespace Route_Groups_AspNet.Endpoints.Categories;
